@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 - Lista de Tareas</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .ocultar { display: none; }
+        .tarea-completada { text-decoration: line-through; }
+    </style>
+</head>
+<body>
+
+    <!-- Inicio de sesión -->
+    <div id="login">
+        <h2>Iniciar Sesión</h2>
+
+        <label for="alumno">Alumno:</label>
+        <input type="text" id="alumno" placeholder="Alumno"><br>
+
+        <label for="curso">Curso:</label>
+        <input type="text" id="curso" placeholder="Curso"><br><br>
+        
+        <button id="boton">Entrar</button>
+        <p id="error" style="color: red; display: none;">Datos incorrectos</p>
+    </div>
+
+    <!-- Lista de tareas -->
+    <div id="app" class="ocultar">
+        <h2>Bienvenido, <span id="nombreAlumno"></span></h2>
+        <input type="text" id="nuevaTarea" placeholder="Nueva tarea">
+        <button id="agregarTarea">Añadir</button>
+        <ul id="listaTareas"></ul>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Inicio de sesión
+            $("#boton").click(function() {
+                $.getJSON("usuarios.json", function(data) {
+                    if ($("#alumno").val() === data.alumno && $("#curso").val() === data.curso) {
+                        $("#login").hide();
+                        $("#app").removeClass("ocultar");
+                        $("#nombreAlumno").text(data.alumno);
+                    } else {
+                        $("#error").show();
+                    }
+                });
+            });
+
+            // Agregar tarea
+            $("#agregarTarea").click(function() {
+                let tareaTexto = $("#nuevaTarea").val();
+                if (tareaTexto) {
+                    $("#listaTareas").append(`
+                        <li>
+                            <span class="textoTarea">${tareaTexto}</span>
+                            <button class="completar">Completada</button>
+                            <button class="eliminar">Borrar</button>
+                        </li>
+                    `);
+                    $("#nuevaTarea").val("");
+                }
+            });
+
+            // Marcar tarea como completada
+            $(document).on("click", ".completar", function() {
+                $(this).siblings(".textoTarea").toggleClass("tarea-completada");
+            });
+
+            // Eliminar tarea
+            $(document).on("click", ".eliminar", function() {
+                $(this).parent().remove();
+            });
+        });
+    </script>
+
+</body>
+</html>

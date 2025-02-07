@@ -1,0 +1,56 @@
+.button0 {
+
+    background-color: green;
+    box-shadow: 4px 4px 10px 2px rgb(12, 175, 26);
+    color: aliceblue;
+    padding: 30px 70px;
+    width: 120px;
+    height: 65px;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+    /*cambio progresivo*/
+    cursor: pointer;
+    /*cambio cursor al hacer hover*/
+
+}
+
+.button0:hover {
+    background-color: rgb(5, 36, 5);
+    box-shadow: 4px 4px 10px 2px rgb(6, 250, 30);
+    color: rgb(1, 29, 21);
+    background-image: linear-gradient(to bottom right, rgba(0, 128, 0, 0.9),
+            rgba(255, 255, 0, 0.7)), url("logo_tech.png");
+}
+
+.button0:active {
+    background-color: rgb(5, 36, 5);
+    transform: translateY(10px);
+    width: 100px;
+    height: 55px;
+}
+
+.button:hover {
+    background-color: rgb(5, 36, 5);
+    box-shadow: 4px 4px 10px 2px rgb(6, 250, 30);
+    color: rgb(5, 148, 105);
+
+}
+
+.button {
+
+    background-image: linear-gradient(to bottom right, rgba(0, 128, 0, 0.9), rgba(255, 255, 0, 0.7)),
+        url("logo_tech.png");
+
+    color: aliceblue;
+    padding: 30px 70px;
+    width: 120px;
+    height: 45px;
+    text-align: right;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 2px rgb(12, 175, 26);
+}

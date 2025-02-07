@@ -1,0 +1,170 @@
+
+details {
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+summary {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.summary2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+details p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+h1 {
+    color: rgb(15, 235, 121);
+    text-shadow: 2px 2px 5px black;
+}
+
+.button2 {
+
+    background-color: rgb(128, 238, 238);
+
+    color: rgb(2, 24, 43);
+    padding: 10px 30px;
+    width: 120px;
+    height: 45px;
+    text-align: center;
+    vertical-align: center;
+    display: inline-block;
+    font-size: 45px;
+}
+
+.button3 {
+
+    background-color: rgb(117, 119, 236);
+
+    color: rgb(2, 24, 43);
+    padding: 10px 30px;
+    width: 120px;
+    height: 45px;
+    text-align: center;
+    vertical-align: center;
+    display: inline-block;
+    font-size: 45px;
+    border-radius: 20px;
+}
+
+.button4:hover, .button5:hover, .button6:hover, .button7:hover {
+background-color: rgb(5, 36, 5);
+box-shadow: 4px 4px 10px 2px rgb(6, 250, 30);
+color: rgb(247, 247, 247);
+border: 5px solid rgb(6, 250, 30);
+
+}
+
+.button4 {
+
+background-color: rgb(117, 119, 236);
+
+color: rgb(2, 24, 43);
+padding: 10px 30px;
+width: 120px;
+height: 45px;
+text-align: center;
+vertical-align: center;
+display: inline-block;
+font-size: 45px;
+border-radius: 20px;
+}
+
+.button5 {
+
+background-color: rgb(133, 135, 238);
+box-shadow: 4px 4px 10px 2px rgb(42, 28, 238);
+color: rgb(2, 24, 43);
+padding: 10px 30px;
+width: 120px;
+height: 45px;
+text-align: center;
+vertical-align: center;
+display: inline-block;
+font-size: 45px;
+border-radius: 20px;
+}
+
+.button6 {
+
+background-color: rgb(117, 119, 236);
+
+color: rgb(2, 24, 43);
+padding: 10px 30px;
+width: 120px;
+height: 45px;
+text-align: center;
+vertical-align: center;
+display: inline-block;
+font-size: 45px;
+border-radius: 20px;
+box-shadow: 4px 4px 10px 2px rgb(42, 28, 238);
+}
+
+.button6:active, .button7:active{
+background-color: rgb(146, 68, 235);
+color:aliceblue;
+transform: translateY(10px);
+width: 100px;
+height: 55px;
+}
+
+.button7 {
+
+    background-image: linear-gradient(to bottom right, rgba(0, 128, 0, 0.9), rgba(255, 255, 0, 0.7)),
+        url("logo_tech.png");
+
+    color: rgb(174, 59, 228);
+    padding: 30px 70px;
+    width: 120px;
+    height: 65px;
+    text-align: right;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 20px;
+
+}
+ .button8:hover {
+    background-color: rgb(5, 36, 5);
+    box-shadow: 4px 4px 10px 2px rgb(6, 250, 30);
+    color: rgb(247, 247, 247);
+    width: 140px;
+    border: 5px solid rgb(6, 250, 30);
+    transition: color 1s ease, border 1s ease;
+    
+    }
+
+   .button8:active{
+        background-color: rgb(146, 68, 235);
+        color:aliceblue;
+        transform: translateY(10px);
+        width: 90px;
+        height: 50px;
+       
+        }
+
+.button8 {
+
+    background-image: linear-gradient(to bottom right, rgba(0, 128, 0, 0.9), rgba(255, 255, 0, 0.7)),
+        url("logo_tech.png");
+
+    color: rgb(174, 59, 228);
+    padding: 30px 70px;
+    width: 120px;
+    height: 65px;
+    text-align: right;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 2px rgb(42, 28, 238);
+    border: 5px solid #06880d;
+    
+
+}

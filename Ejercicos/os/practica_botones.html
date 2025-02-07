@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica botones</title>
+    <link rel="stylesheet" href="practicaBotones.css">
+   
+</head>
+
+<body>
+    <h1>Práctica de diseño de botones en CSS puro</h1>
+
+    <details>
+        <summary>Ejercicio 1: Recopila las propiedades más relevantes para el diseño de botones
+            custom en CSS, explicando brevemente la función de cada una en el diseño</summary>
+
+        <details>
+            <summary class="summary2">A. Fondo y color:</summary>
+            <pre>
+    background-color: Define el color de fondo del botón.
+    Ejemplo: background-color: #4CAF50; (verde).
+
+    background-image: Permite usar gradientes o imágenes como fondo.
+    Ejemplo: background-image: linear-gradient(to bottom, #4CAF50, #2E7D32);
+    Ejemplo con imagen: linear-gradient(to bottom right, rgba(0, 128, 0, 0.9),
+            rgba(255, 255, 0, 0.7)), url("logo_tech.png");
+
+    color: Establece el color del texto en el botón.
+    Ejemplo: color: white;
+            </pre>
+        </details>
+
+        <details>
+            <summary class="summary2">B. Bordes y esquinas:</summary>
+            <pre>
+    border: Establece el tamaño, tipo y color del borde.
+    Ejemplo: border: 2px solid #4CAF50;
+
+    border-radius: Redondea las esquinas del botón.
+    Ejemplo: border-radius: 10px; (botón con esquinas redondeadas).
+
+    box-shadow: Añade sombra al botón para darle profundidad.
+    Ejemplo: box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+            </pre>
+        </details>
+
+        <details>
+            <summary class="summary2">C. Tamaño-espaciado y Contenido-alineación:</summary>
+            <pre>
+    padding: Controla el espacio interno entre el contenido (texto o íconos) y los bordes del botón.
+    Ejemplo: padding: 10px 20px;
+
+    margin: Define el espacio externo alrededor del botón.
+    Ejemplo: margin: 10px;
+    
+    width y height: Especifica las dimensiones del botón.
+    Ejemplo: width: 150px; height: 50px;
+    ------
+    text-align: Alinea el texto dentro del botón (izquierda, derecha o centrado).
+    Ejemplo: text-align: center;
+
+    display: Controla cómo se muestra el botón.
+    Ejemplo: display: inline-block; para que el botón no ocupe toda la línea.
+
+    vertical-align: Ajusta la posición vertical del contenido.
+                </pre>
+        </details>
+
+        <details>
+            <summary class="summary2">D. Estilo al interactuar (estado del botón):</summary>
+            <pre>
+
+    <b>hover </b>(:hover): Cambia el estilo cuando el cursor pasa por encima.
+    Ejemplo:
+        button:hover {
+        background-color: #45a049;
+        transform: scale(1.05); /* Efecto de agrandamiento */
+    }
+
+   <b>active </b> (:active): Cambia el estilo cuando el botón está presionado.
+    Ejemplo:
+       button:active {
+        background-color: #2e7d32;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+   <b>focus </b> (:focus): Define el estilo al recibir foco, útil para accesibilidad.
+    Ejemplo:
+        button:focus {
+        outline: 2px solid #4CAF50;
+    };
+                    </pre>
+        </details>
+
+        <details>
+            <summary class="summary2">E. Animaciones y transiciones:</summary>
+            <pre>
+
+    <b>transition:</b> Crea efectos suaves para cambios en propiedades como color, tamaño o sombra.
+    Ejemplo:
+    
+    button {
+        transition:  all 0.3s ease;
+    }
+    
+    <b>transform:</b> Permite rotar, escalar o mover el botón.
+    Ejemplo:
+    
+    button:hover {
+        transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    }
+                        </pre>
+        </details>
+
+        <details>
+            <summary class="summary2">F. Efectos avanzados:</summary>
+            <pre>
+    filter: Agrega efectos como brillo o desenfoque.
+    Ejemplo: filter: brightness(1.2); para hacer el botón más luminoso al pasar el cursor.
+
+    clip-path: Permite crear formas personalizadas para el botón.
+    Ejemplo: clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%); (botón con una forma trapezoidal).
+                            </pre>
+        </details>
+
+    </details>
+
+    <details>
+        <summary> Ejercicio 2: Diseña un botón sencillo diferente a los por defecto, sin hover ni
+            sombras.</summary>
+        <br>
+        <div class="button2">
+            Boton
+        </div>
+    </details>
+
+    <details>
+        <summary> Ejercicio 3: Diseña un botón sencillo diferente a los por defecto que tenga los bordes
+            redondeados.</summary>
+        <br>
+        <div class="button3">
+            Boton
+        </div>
+    </details>
+
+    <details>
+        <summary> Ejercicio 4: Diseña un botón sencillo diferente a los por defecto y añade efectos de
+            hover que cambien el botón.</summary>
+        <br>
+        <div class="button4">
+            Boton
+        </div>
+    </details>
+
+    <details>
+        <summary> Ejercicio 5: Diseña un botón sencillo diferente a los por defecto y añade sombreado.</summary>
+        <br>
+        <div class="button5">
+            Boton
+        </div>
+    </details>
+    <details>
+        <summary> Ejercicio 6: Diseña un botón sencillo diferente a los por defecto y añade un efecto de
+            click empleando el estado active.</summary>
+        <br>
+        <div class="button6">
+            Boton
+        </div>
+    </details>
+    <details>
+        <summary> Ejercicio 7: Diseña un botón que emplee como fondo gradientes lineales o radiales..</summary>
+        <br>
+        <div class="button7">
+            Pulsa
+        </div>
+    </details>
+
+    <details>
+        <summary>Ejercicio 8: Diseña un botón combinando todo lo anterior</summary>
+        <br>
+        <p>y guarda su código de css
+        para poder emplearlo en otras prácticas. No puede haber dos botones iguales entre
+        alumnado de esta clase. Ponle tu nombre a tu botón.
+        Recopila todos los ejercicios anteriores en un único documento HTML y su hoja de
+        estilos, será el documento de entrega.</p>
+        <br>
+        <div class="button8">
+            Pulsa
+        </div>
+
+    </details>
+
+<h4>Oscar Racero</h4>
+
+
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4: Animaciones en CSS</title>
+    <style>
+        /* EJERCICIO 1: Movimiento continuo de izquierda a derecha */
+        .movimiento {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation: mover 3s linear infinite;
+        }
+
+        @keyframes mover {
+            from {
+                left: 0;
+            }
+            to {
+                left: 300px;
+            }
+        }
+
+        /* EJERCICIO 2: Cambio gradual entre tres colores */
+        .colores {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation: cambiarColor 4s infinite;
+        }
+
+        @keyframes cambiarColor {
+            0% {
+                background-color: blue;
+            }
+            50% {
+                background-color: yellow;
+            }
+            100% {
+                background-color: green;
+            }
+        }
+
+        /* EJERCICIO 3: Efecto de pulsación */
+        .pulsacion {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            animation: pulsar 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulsar {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+        }
+
+        /* EJERCICIO 4: Giro continuo */
+        .giro {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            animation: girar 2s linear infinite;
+        }
+
+        @keyframes girar {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* EJERCICIO 5: Aparición gradual */
+        .aparicion {
+            width: 100px;
+            height: 100px;
+            background-color: teal;
+            opacity: 0;
+            animation: aparecer 2s ease-in forwards;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* EJERCICIO 6: Zigzag */
+        .zigzag {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: relative;
+            animation: zigzag 3s ease-in-out infinite;
+        }
+
+        @keyframes zigzag {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(50px, 50px);
+                background-color: cyan;
+            }
+            50% {
+                transform: translate(100px, 0);
+                background-color: lime;
+            }
+            75% {
+                transform: translate(150px, 50px);
+                background-color: magenta;
+            }
+        }
+
+        /* EJERCICIO 7: Indicador de carga */
+        .carga {
+            display: flex;
+            gap: 10px;
+        }
+
+        .carga div {
+            width: 20px;
+            height: 20px;
+            background-color: gray;
+            border-radius: 50%;
+            animation: cargar 1s infinite;
+        }
+
+        .carga div:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .carga div:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes cargar {
+            0%, 100% {
+                transform: scale(1);
+                background-color: gray;
+            }
+            50% {
+                transform: scale(1.5);
+                background-color: lightblue;
+            }
+        }
+
+        /* EJERCICIO 8: Curva de Bézier */
+        .bezier {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            position: relative;
+            animation: bezierPath 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+        }
+
+        @keyframes bezierPath {
+            0% {
+                left: 0;
+                top: 0;
+            }
+            25% {
+                left: 50px;
+                top: 100px;
+            }
+            50% {
+                left: 100px;
+                top: 50px;
+            }
+            75% {
+                left: 150px;
+                top: 150px;
+            }
+            100% {
+                left: 200px;
+                top: 0;
+            }
+        }
+
+        /* EJERCICIO 9: Recorrido marcado con curva de Bézier */
+        .recorrido {
+            width: 100px;
+            height: 100px;
+            background-color: darkgreen;
+            position: relative;
+            animation: recorridoBezier 5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+        }
+
+        @keyframes recorridoBezier {
+            0% {
+                left: 0;
+                top: 0;
+            }
+            25% {
+                left: 100px;
+                top: 50px;
+            }
+            50% {
+                left: 200px;
+                top: 100px;
+            }
+            75% {
+                left: 300px;
+                top: 50px;
+            }
+            100% {
+                left: 400px;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p><b>EJERCICIO 1</b>: Crea un elemento en 2D que se mueva de izquierda a derecha continuamente utilizando una animación básica.</p>
+    <div class="movimiento"></div>
+
+    <p><b>EJERCICIO 2</b>: Crea un elemento que cambie gradualmente entre tres colores diferentes de forma cíclica.</p>
+    <div class="colores"></div>
+
+    <p><b>EJERCICIO 3</b>: Diseña un efecto de "pulsación" en el que un elemento se escale hacia afuera y hacia adentro.</p>
+    <div class="pulsacion"></div>
+
+    <p><b>EJERCICIO 4</b>: Crea un elemento que gire continuamente sobre su eje central.</p>
+    <div class="giro"></div>
+
+    <p><b>EJERCICIO 5</b>: Diseña un elemento que aparezca gradualmente al cargar la página mediante un cambio en la opacidad.</p>
+    <div class="aparicion"></div>
+
+    <p><b>EJERCICIO 6</b>: Crea un efecto en el que un elemento cambie de tamaño, cambie de color y se mueva en un patrón en zigzag.</p>
+    <div class="zigzag"></div>
+
+    <p><b>EJERCICIO 7</b>: Diseña un conjunto de círculos que se muevan de forma sincronizada para simular un indicador de carga.</p>
+    <div class="carga">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <p><b>EJERCICIO 8</b>: Crea un elemento que se mueva en un recorrido marcado utilizando una curva de Bézier personalizada para el timing.</p>
+    <div class="bezier"></div>
+
+    <p><b>EJERCICIO 9</b>: Crea un elemento que se mueva en un recorrido marcado utilizando una curva de Bézier personalizada para el timing.</p>
+    <div class="recorrido"></div>
+</body>
+
+</html>

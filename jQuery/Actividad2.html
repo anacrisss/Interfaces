@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .contenedor {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .nuevo {
+            background-color: rgb(255, 255, 214);
+            padding: 10px;
+            margin: 5px 0;
+        }
+        #animado {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(198, 252, 198);
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicios jQuery</h1>
+    
+    <div class="contenedor">
+        <h2>Ejercicio 1: Mostrar y cambiar texto</h2>
+        <button id="mostrarTexto">Mostrar Texto</button>
+        <button id="cambiarTexto">Cambiar Texto</button>
+        <div id="texto">Texto original</div>
+    </div>
+    
+    <div class="contenedor">
+        <h2>Ejercicio 2: Agregar párrafos</h2>
+        <button id="agregarInicio">Agregar al inicio</button>
+        <button id="agregarFinal">Agregar al final</button>
+        <div id="contenedor">Contenedor</div>
+    </div>
+    
+    <div class="contenedor">
+        <h2>Ejercicio 3: Insertar contenido con before() y after()</h2>
+        <div id="elemento3">Elemento con contenido</div>
+    </div>
+    
+    <div class="contenedor">
+        <h2>Ejercicio 4: Reemplazar elemento</h2>
+        <button id="reemplazar">Reemplazar elemento</button>
+        <div id="reemplazo">Este div será reemplazado</div>
+    </div>
+    
+    <div class="contenedor">
+        <h2>Ejercicio 5: Vaciar contenido</h2>
+        <button id="vaciar">Vaciar contenido</button>
+        <div id="contenedorVacio">Contenido que será eliminado</div>
+    </div>
+    
+    <div class="contenedor">
+        <h2>Ejercicio 6: Manipulación de elementos</h2>
+        <button id="crearElemento">Crear Elemento</button>
+        <button id="toggleClase">Alternar Clase</button>
+        <button id="eliminarElementos">Eliminar Elementos</button>
+    </div>
+    
+    <div class="contenedor">
+        <h2>Ejercicio 7: Modificar enlace</h2>
+        <a id="enlace" href="https://google.com">Visitar página</a>
+        <button id="cambiarEnlace">Cambiar Enlace</button>
+    </div>
+    
+    <div class="contenedor">
+        <h2>Ejercicio 8: Crear y animar elementos</h2>
+        <input type="text" id="textoClase" placeholder="Escribe una clase">
+        <button id="crearAnimado">Crear Elemento Animado</button>
+        <button id="eliminarAnimado">Eliminar Animado</button>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            $('#mostrarTexto').click(function() {
+                alert($('#texto').text());
+            });
+            $('#cambiarTexto').click(function() {
+                $('#texto').text('Texto cambiado');
+            });
+
+            $('#agregarInicio').click(function() {
+                $('#contenedor').prepend('<p class="nuevo">Párrafo al inicio</p>');
+            });
+            $('#agregarFinal').click(function() {
+                $('#contenedor').append('<p class="nuevo">Párrafo al final</p>');
+            });
+
+            $('#elemento3').hover(
+                function() { $(this).before('<p class="nuevo">Antes del elemento</p>'); },
+                function() { $(this).after('<p class="nuevo">Después del elemento</p>'); }
+            );
+
+            $('#reemplazar').click(function() {
+                $('#reemplazo').replaceWith('<p class="nuevo">Elemento reemplazado</p>');
+            });
+
+            $('#vaciar').click(function() {
+                $('#contenedorVacio').empty();
+            });
+
+            $('#crearElemento').click(function() {
+                $('<div class="nuevo">Elemento nuevo</div>').appendTo('body');
+            });
+            $('#toggleClase').click(function() {
+                $('.nuevo').toggleClass('destacado');
+            });
+            $('#eliminarElementos').click(function() {
+                $('.nuevo').remove();
+            });
+
+            $('#cambiarEnlace').click(function() {
+                $('#enlace').attr('href', 'https://google.com');
+            });
+
+            $('#crearAnimado').click(function() {
+                var clase = $('#textoClase').val();
+                $('<div id="animado" class="' + clase + '">Animado</div>').appendTo('body').animate({ left: '200px' }, 1000);
+            });
+            $('#eliminarAnimado').click(function() {
+                $('#animado').remove();
+            });
+        });
+    </script>
+</body>
+</html>

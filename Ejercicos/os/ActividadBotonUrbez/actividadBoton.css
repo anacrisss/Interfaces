@@ -1,0 +1,122 @@
+.boton1{
+    background-color: green; 
+    /* Color de fondo del botón */
+    border: none;
+    /* Especificar si el botón va a tener o no borde, y si lo tiene de que color */
+    color: white;
+    /* Color de las letras de nuestro botón */
+    padding: 15px 32px;
+    /* elleno que se crea alrededor del contenido de un elemento dentro de los bordes definidos */
+    text-align: center;
+    /* Posición del texto en nuestro botón */
+    display: inline-block;
+    /* Define la posición del botón */
+    font-size: 50px;
+    /* Tamaño de las letras del botón */
+    border-radius: 5%;
+    /* Redondeo de las esquinas de nuestro botón */
+}
+
+
+
+.boton2{
+    background-color: blue;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    border-radius: 25%;
+}
+
+
+
+.boton3{
+    background-color: green;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    border-radius: 100%;
+}
+
+
+
+.boton4{
+    background-color: gray;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    border-radius: 15%;
+}
+
+.boton4:hover{
+    background-color: red;
+}
+
+
+
+.boton5{
+    background-color: cornflowerblue;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    border-radius: 1%;
+    box-shadow: 0 5px 50px black;
+}
+
+
+
+.boton6{
+    background-color: fuchsia;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    transition-duration: 1s;
+}
+
+.boton6:active{
+    background-color: aqua;
+    box-shadow: 0 2px gray;
+    transform: translateY(50px);
+}
+
+
+
+.boton7{
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    border-radius: 30%;
+    background-image: linear-gradient(to bottom right ,red,purple);
+}
+
+        /*                   UTLIMO EJERCICIO                   */
+
+.boton8{
+    background-image: linear-gradient(to bottom left ,yellow,purple);
+    border: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    text-decoration: none;
+    border-radius: 100%;
+    cursor: grab;
+    transition-duration: 1s;
+    box-shadow: 0 9px yellow;
+}
+
+.boton8:hover{
+    background-image: linear-gradient(to bottom left ,red,gray);
+
+}
+
+.boton8:active{
+    box-shadow: 0 2px gray;
+    transform: translateX(25%);
+}

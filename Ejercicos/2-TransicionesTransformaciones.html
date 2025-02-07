@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2: Transiciones y Transformaciones</title>
+    <style>
+
+        /* EJERCICIO 1  Crea un elemento en 2D que se mueva de posición al hacer hover y
+cambie su color de forma instantánea.*/
+        .caja {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+
+        .caja:hover {
+            transform: translate(40px, 10px);
+            background-color: blue;
+        }
+
+        /* EJERCICIO 2 Crea un elemento en 2D que se escale al hacer hover y cambie su color
+de forma instantánea.*/
+        .caja2 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+
+        .caja2:hover {
+            transform: scale(2, 0.2);
+            background-color: blue;
+        }
+
+        /* EJERCICIO 3 Crea un elemento en 2D que rote al hacer hover y cambie su color de
+forma instantánea.*/
+        .caja3 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+
+        .caja3:hover {
+            transform: rotate(20deg);
+            background-color: blue;
+        }
+
+        /* EJERCICIO 4 Crea un elemento en 2D que se mueva de posición al hacer hover y
+cambie su color mediante una transición sin delay. */
+        .caja4 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            transition: all 0.5s ease;
+        }
+
+        .caja4:hover {
+            transform: translate(50px, 20px);
+            background-color: blue;
+        }
+
+        /* EJERCICIO 5 Crea un elemento en 2D que se escale al hacer hover y cambie su color
+mediante una transición con delay muy larga. */
+        .caja5 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            transition: all 3s ease;
+        }
+
+        .caja5:hover {
+            transform: scale(2, 0.2);
+            background-color: blue;
+        }
+
+        /* EJERCICIO 6  Crea un elemento en 2D que se escale y deforme al hacer hover y
+cambie su color mediante una transición con delay.*/
+        .caja6 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            transition: transform 0.5s ease, background-color 0.5s ease;
+        }
+
+        .caja6:hover {
+            transform: scale(1.5, 0.5) rotate(15deg);
+            background-color: blue;
+        }
+
+        /* EJERCICIO 7 Crea un elemento en 2D que rote al hacer hover y cambie su color
+mediante una transición sin delay que emplee una curva de bezier. */
+        .caja7 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        .caja7:hover {
+            transform: rotate(180deg);
+            background-color: blue;
+        }
+
+        /* EJERCICIO 8  Crea un elemento en 2D que rote y se escale al hacer hover y cambie su
+color mediante una transición.*/
+        .caja8 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            transition: transform 0.8s ease;
+        }
+
+        .caja8:hover {
+            transform: rotate(45deg) scale(1.5);
+            background-color: blue;
+        }
+
+        /* EJERCICIO 9 Crea un elemento en 2D que rote, cambie su tamaño solo en un eje,
+cambie de color y se deforme. Esto debe ocurrir mediante una transición que emplee
+una curva de bezier. */
+        .caja9 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .caja9:hover {
+            transform: rotate(45deg) scaleX(1.5);
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p><b>EJERCICIO 1</b></p>
+    <div class="caja"></div>
+    <p><b>EJERCICIO 2</b></p>
+    <div class="caja2"></div>
+    <p><b>EJERCICIO 3</b></p>
+    <div class="caja3"></div>
+    <p><b>EJERCICIO 4</b></p>
+    <div class="caja4"></div>
+    <p><b>EJERCICIO 5</b></p>
+    <div class="caja5"></div>
+    <p><b>EJERCICIO 6</b></p>
+    <div class="caja6"></div>
+    <p><b>EJERCICIO 7</b></p>
+    <div class="caja7"></div>
+    <p><b>EJERCICIO 8</b></p>
+    <div class="caja8"></div>
+    <p><b>EJERCICIO 9</b></p>
+    <div class="caja9"></div>
+</body>
+
+</html>

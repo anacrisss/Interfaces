@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocultar y Mostrar</title>
+
+    <!-- Incluye la biblioteca de jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // Ejercicio 1: Crea un botón que permita ocultar y mostrar otro elemento del DOM.
+        $(document).ready(function () {
+            $(".botonOcultal").click(function() {
+                $('.ocultar').toggle();
+            });
+        });
+
+        // Ejercicio 2: Cambiar opacidad de un elemento del DOM al pasar el ratón por encima.
+        $(document).ready(function () {
+            // Cambia la opacidad al pasar el ratón
+            $(".cambiarOpacidad").hover(
+                function () {
+                    // Al entrar el ratón
+                    $(this).css("opacity", "0.5");
+                },
+                function () {
+                    // Al salir el ratón
+                    $(this).css("opacity", "1");
+                }
+            );
+        });
+
+
+    </script>
+
+</head>
+
+<body>
+    <!-- Ejercicio 1: Crea un botón que permita ocultar y mostrar otro elemento del DOM. -->
+    <button class="botonOcultal">Ocultar/Mostrar</button>
+    <div class="ocultar">
+        <p>Este párrafo se tiene que ocultar</p>
+
+    <!-- Ejercicio 2: Cambiar opacidad de un elemento del DOM al pasar el ratón por encima. -->
+    <div class="cambiarOpacidad">
+        Pasa el ratón por aquí
+    </div>
+        
+    <style>
+        .cambiarOpacidad {
+            width: 20px;
+            height: 100px;
+            background-color: #007BFF;
+            
+        }
+
+    </style>
+       

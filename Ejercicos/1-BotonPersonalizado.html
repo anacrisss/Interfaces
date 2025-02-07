@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones</title>
+
+    <style>
+        /* Ejercicio 1: Recopila las propiedades más relevantes para el diseño de botones
+custom en CSS, explicando brevemente la función de cada una en el diseño.
+
+background-color: Define el color de fondo.
+color: Especifica el color del texto.
+border: Permite añadir un borde al botón (color, grosor, estilo).
+border-radius: Redondea las esquinas del botón.
+padding: Añade espacio interno entre el texto y los bordes del botón.
+margin: Establece el espacio externo alrededor del botón.
+font-size y font-family: Cambian el tamaño y estilo de la fuente.
+box-shadow: Añade sombras al botón.
+transition: Permite animaciones suaves en los cambios de estilo.
+cursor: Cambia el puntero al pasar sobre el botón.
+ */
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+        }
+
+
+        /* Ejercicio 8: Diseña un botón combinando todo lo anterior y guarda su código de css
+para poder emplearlo en otras prácticas. No puede haber dos botones iguales entre
+alumnado de esta clase. Ponle tu nombre a tu botón. */
+
+        .b8 {
+            padding: 20px 10px;
+            text-align: center;
+            display: inline-flex;
+            font-size: 20px;
+            border-radius: 50%;
+            background-image: linear-gradient(to bottom right, rgb(41, 243, 179), rgb(235, 147, 235));
+            cursor: grab;
+            transition-duration: 2s;
+            box-shadow: 0 10px 20px rgb(188, 99, 243);
+
+        }
+
+        .b8:hover {
+            background-image: linear-gradient(to bottom left, rgb(41, 243, 179), rgb(235, 147, 235)); 
+        }
+
+        .b8:active {
+            box-shadow: 0 20px  rgb(41, 243, 179);
+            transform: translateY(20%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Práctica de diseño de botones en CSS puro</h1>
+
+    <button class="b8">Ana Cris</button><br>
+
+</body>
+
+</html>
