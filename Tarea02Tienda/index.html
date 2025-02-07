@@ -1,0 +1,171 @@
+<!DOCTYPE html> <!-- Define el tipo de documento HTML -->
+<html lang="es"> <!-- Define el idioma del documento como español -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura la visualización en dispositivos móviles -->
+    <title>Tienda</title> <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Vincula Bootstrap para estilos -->
+</head>
+
+<header>
+    <a href="index.html"><img src="./Imagenes/terrazo.jpg" width="70px">HOME</a>
+    <!-- Enlace a la página de inicio con una imagen -->
+    <hr> <!-- Línea horizontal -->
+    <h1 style="text-align:center">DeMoDe</h1> <!-- Título principal centrado -->
+    <hr> <!-- Línea horizontal -->
+
+    <style type="text/css">
+        /* Colapsa  Estilos CSS para la tabla*/
+        .tg {
+            border-collapse: collapse;
+            /* Colapsa los bordes de la tabla */
+            border-spacing: 0;
+            /* Elimina el espaciado */
+            margin: auto;
+            /* Centra la tabla */
+        }
+
+        .tg td {
+            border: 1px solid black;
+            /* Bordes de las celdas */
+            padding: 10px;
+            /* Espacio interno de las celdas */
+        }
+
+        .tg th {
+            border: 1px solid black;
+            /* Bordes de los encabezados */
+        }
+    </style>
+
+    <table class="tg"> <!-- Tabla de navegación -->
+        <thead>
+            <tr>
+                <td><a href="index.html">INICIO</a></td> <!--Enlace a la página de inicio -->
+                <td><a href="ropa.html">ROPA</a></td> <!-- Enlace a la página de ropa -->
+                <td><a href="calzado.html">CALZADO</a></td> <!-- Enlace a la página de calzado -->
+                <td><a href="contacto.html">CONTACTO</a></td> <!-- Enlace a la página de contacto -->
+            </tr>
+        </thead>
+    </table>
+    <br>
+
+    <figure>
+        <img src="./Imagenes/terrazo.jpg" alt="Imagen cabeceza" style="width: 100%;  height: 100px;">
+        <!-- Imagen de encabezado -->
+    </figure>
+    <br>
+</header>
+
+<body>
+    <h2 style="text-align:center">INICIO</h2> <!-- Subtítulo centrado -->
+    <br>
+    <div class="row"> <!-- Contenedor de filas -->
+        <div class="col-sm-3"> <!-- Columna para el menú lateral -->
+            <h3>Ideas</h3> <!-- Título de la sección -->
+            <nav class="L"> <!-- Navegación lateral -->
+                <ul>
+                    <li><a href="#O1">Opción 1</a></li> <!-- Enlace a la opción 1 -->
+                    <li><a href="#O2">Opción 2</a></li> <!-- Enlace a la opción 2 -->
+                </ul>
+            </nav>
+            <section>
+                <h3>Comentarios</h3> <!-- Título de la sección de comentarios -->
+                <details>
+                    <summary>Clientes</summary> <!-- Detalles de clientes -->
+                    <p>Comentario</p> <!-- Comentario de cliente -->
+                    <p>Comentario 2</p> <!-- Segundo comentario de cliente -->
+                </details>
+                <details>
+                    <summary>Seguidores</summary> <!-- Detalles de seguidores -->
+                    <p>Comentario</p> <!-- Comentario de seguidor -->
+                    <p>Comentario 2</p> <!-- Segundo comentario de seguidor -->
+                </details>
+            </section>
+        </div>
+
+        <div class="col-sm-4"> <!-- Columna para la imagen de ropa -->
+            <figure>
+                <a href="ropa.html"><img src="./Imagenes/ropaIndex.jpg" alt="Imagen Portada"
+                        style="width: 80%; height: 80%; margin:auto;"></a>
+                <!-- Imagen de portada de ropa lleva a ropa.html-->
+                <figcaption style="text-align:center">ROPA</figcaption> <!-- Título de la imagen -->
+            </figure>
+        </div>
+
+        <div class="col-sm-4"> <!-- Columna para la imagen de calzado -->
+            <figure>
+                <a href="calzado.html"><img src="./Imagenes/zapatilla.jpg" alt="Imagen Portada"
+                        style="width: 80%; height: 80%; margin:auto;"></a>
+                <!-- Imagen de portada de calzado -->
+                <figcaption style="text-align:center">CALZADO</figcaption> <!-- Título de la imagen -->
+            </figure>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <hr>
+
+    <div class="row" id="O1"> <!-- Fila para la Opción 1 -->
+        <div class="col-sm-3">
+            <figure>
+                <img src="./Imagenes/botas.jpg" alt="Imagen" style="width:40%; height:40%"> <!-- Imagen de botas -->
+            </figure>
+        </div>
+        <div class="col-sm-3">
+            <figure>
+                <img src="./Imagenes/vestido 2.jpg" alt="Imagen" style="width:40%; height:40%">
+                <!-- Imagen de vestido -->
+            </figure>
+        </div>
+        <div class="col-sm-3">
+            <figure>
+                <img src="./Imagenes/camisa.jpg" alt="Imagen" style="width:40%; height:40%"> <!-- Imagen de camisa -->
+            </figure>
+        </div>
+        <div class="col-sm-3">
+            <figure>
+                <img src="./Imagenes/camisa2.jpg" alt="Imagen" style="width:40%; height:40%">
+                <!-- Otra imagen de camisa -->
+            </figure>
+        </div>
+    </div>
+
+    <div class="row" id="O2"> <!-- Fila para la Opción 2 -->
+        <div class="col-sm-3">
+            <figure>
+                <img src="./Imagenes/ropaIndex.jpg" alt="Imagen" style="width:40%; height:40%">
+                <!-- Imagen de camisa -->
+            </figure>
+        </div>
+        <div class="col-sm-3">
+            <figure>
+                <img src="./Imagenes/zapatilla.jpg" alt="Imagen" style="width:40%; height:40%">
+                <!-- Imagen de zapatilla -->
+            </figure>
+        </div>
+        <div class="col-sm-3">
+            <figure>
+                <img src="./Imagenes/vestido.jpg" alt="Imagen" style="width:40%; height:40%"> <!-- Imagen de vestido -->
+            </figure>
+        </div>
+        <div class="col-sm-3">
+            <figure>
+                <img src="./Imagenes/sandalias.jpg" alt="Imagen" style="width:40%; height:40%">
+                <!-- Imagen de sandalias -->
+            </figure>
+        </div>
+    </div>
+</body>
+<hr>
+
+<footer>
+    <hr> <!-- Línea horizontal -->
+    <p style="text-align:center">Copyright 2024</p> <!-- Texto centrado de copyright -->
+    <hr> <!-- Línea horizontal -->
+</footer>
+
+</html>

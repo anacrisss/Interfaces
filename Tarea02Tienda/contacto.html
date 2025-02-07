@@ -1,0 +1,104 @@
+<!DOCTYPE html> <!-- Define el tipo de documento HTML -->
+<html lang="es"> <!-- Define el idioma del documento como español -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la visualización en dispositivos móviles -->
+    <title>Tienda</title> <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <!-- Vincula Bootstrap para estilos -->
+</head>
+
+<header>
+    <a href="index.html"><img src="./Imagenes/terrazo.jpg" width="60px">HOME</a> <!-- Enlace a la página de inicio con una imagen -->
+    <hr> <!-- Línea horizontal -->
+    <h1 style="text-align:center">DeMoDe</h1> <!-- Título principal centrado -->
+    <hr> <!-- Línea horizontal -->
+    
+    <style type="text/css"> /*-- Estilos CSS para la tabla y otros elementos */
+        .tg {
+            border-collapse: collapse; /* Colapsa los bordes de la tabla */
+            border-spacing: 0; /* Elimina el espaciado entre celdas */
+            margin: auto; /* Centra la tabla */
+        }
+
+        .tg td {
+            border: 1px solid black; /* Bordes de las celdas */
+            padding: 10px; /* Espacio interno de las celdas */
+        }
+
+        .tg th {
+            border: 1px solid black; /* Bordes de los encabezados */
+        }
+
+        h3 {
+            text-align: center; /* Centra los encabezados de nivel 3 */
+        }
+
+        div {
+            text-align: center; /* Centra el contenido dentro de los divs */
+        }
+    </style>
+
+    <table class="tg"> <!-- Tabla de navegación -->
+        <thead>
+            <tr>
+                <td><a href="index.html">INICIO</a></td> <!-- Enlace a la página de inicio -->
+                <td><a href="ropa.html">ROPA</a></td> <!-- Enlace a la página de ropa -->
+                <td><a href="calzado.html">CALZADO</a></td> <!-- Enlace a la página de calzado -->
+                <td><a href="contacto.html">CONTACTO</a></td> <!-- Enlace a la página de contacto -->
+            </tr>
+        </thead>
+    </table>
+    <br>
+
+    <figure>
+        <img src="./Imagenes/terrazo.jpg" alt="Imagen cabeceza" style="width: 100%; height: 100px;"> <!-- Imagen de encabezado -->
+    </figure>
+</header>
+
+<body>
+    <article>
+        <hr> <!-- Línea horizontal -->
+        <h3 id="contacto"></h3> <!-- Encabezado sin texto, puede ser para un ancla -->
+        <fieldset> <!-- Agrupación de elementos de formulario -->
+            <h3>Iniciar sesión con cuenta</h3>        
+            <div>
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="xxx@xxx.com"> <!-- Campo para correo electrónico -->
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Contraseña"> <!-- Campo para contraseña -->
+                <br>
+            </div>
+        </fieldset>
+        <hr> <!-- Línea horizontal -->
+        
+        <fieldset> <!-- Agrupación de elementos de formulario -->
+            <h3>Rellena tus datos</h3>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required> <!-- Campo para nombre -->
+            <br>
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" name="telefono" placeholder="xxxxxxxxx"> <!-- Campo para teléfono -->
+            <br>
+            <label for="producto">Producto a comprar</label>
+            <input type="text" id="producto" name="producto" placeholder="Productos"> <!-- Campo para producto -->
+            <br>
+            <label for="metodoDeEnvío">Método de envío</label>
+            <select id="metodoDeEnvío" name="metodoDeEnvío" size="1"> <!-- Menú desplegable para métodos de envío -->
+                <option value="visa">Visa</option>
+                <option value="paypal">PayPal</option>
+                <option value="transferencia">Transferencia</option>
+                <option value="efectivo">Efectivo</option>                       
+            </select>
+        </fieldset>
+        <hr> <!-- Línea horizontal -->
+    </article>
+</body>
+
+<footer>
+    <hr> <!-- Línea horizontal -->
+    <p style="text-align:center">Copyright 2024</p> <!-- Texto centrado de copyright -->
+    <hr> <!-- Línea horizontal -->
+</footer>
+
+</html>

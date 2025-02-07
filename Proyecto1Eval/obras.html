@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            border: 1px solid;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 0.5fr 5fr 0.5fr;
+
+            grid-template-areas:
+                "header header header"
+                "content content content"
+                "content2 content2 content2"
+                "footer footer footer ";
+
+            background-image: url("./imagenes/lluviaVaporVelocidad.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300vp;
+            font-style: oblique;
+            /* color: #3e3f17; */
+        }
+
+        .item {
+            border: 1px solid;
+            width: 100vw;
+            height: auto;
+
+        }
+
+        .item1 {
+            color: #3e3f17;
+            grid-area: header;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .item2 {
+            /* 3 columnas */
+            grid-area: content;
+            text-align: center;
+            font-size: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        a:link {
+            color: #3e3f17;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        a:visited {
+            color: #3e3f17;
+            /* Color después de hacer clic (cuando el enlace ha sido visitado) */
+        }
+
+        a:hover {
+            color: #c4c771;
+        }
+
+        .item3 {
+            grid-area: content2;
+            display: flex;
+            justify-content: space-between;
+            /* Distribuir en la misma fila */
+            gap: 10px;
+            /* Espacio entre los elementos */
+        }
+
+        .item3 img {
+            width: 500px;
+            height: auto;
+            border: 1px solid #3e3f17;
+            border-radius: 5%;
+            display: flex;
+        }
+
+        h3 {}
+
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-basis: 30%;
+            /* Cada imagen ocupa el 30% del contenedor */
+            text-align: center;
+        }
+
+        .item4 {
+            grid-area: footer;
+            text-align: center;
+        }
+
+        .t {
+            font-size: 50px;
+            text-align: justify;
+            padding-left: 100px;
+        }
+
+        .t1 {
+            font-size: 20px;
+            text-align: justify;
+            padding-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item item1">
+            <a href="home.html">
+                <h1>Galería Luz de Romance</h1>
+            </a>
+        </div>
+
+        <div class="item item2">
+            <a href="autor.html">Autor</a>
+            <a href="obras.html">Obras</a>
+            <a href="contacto.html">Exposición</a>
+        </div>
+
+
+        <div class="item item3">
+            <div class="row" id="01">
+                <div>
+                    <a href="#1" id="mostrarModal1">
+                        <svg>
+                            <defs>
+                                <img src="./imagenes/El Alba en el Castillo de Norham.jpg"
+                                    alt="El Alba en el Castillo de Norham">
+                            </defs>
+                        </svg>
+                        <h3>La dispación de las formas</h3>
+                    </a>
+                    <dialog id="modal1">
+                        <h3>El Alba en el Castillo de Norham</h3>
+                        <p>"Realizada alrededor de 1845. La obra muestra el castillo de Norham, ubicado en el norte de
+                            Inglaterra, iluminado por la luz suave del amanecer. Aunque el castillo aparece en ruinas,
+                            el foco principal de la pintura está en la atmósfera que lo rodea: la luz del alba tiñe el
+                            cielo de tonos cálidos, mientras que la estructura del castillo se desvanece ante el poder
+                            de la naturaleza.
+
+                            La obra refleja el estilo maduro de Turner, que se centraba más en transmitir emociones a
+                            través de la luz y el color que en detalles arquitectónicos precisos. El tratamiento de la
+                            luz y la atmósfera en esta pintura busca evocar un sentido de lo sublime, la transitoriedad
+                            del tiempo y la relación entre la naturaleza y la historia humana. El castillo, aunque
+                            simbólicamente relacionado con el paso del tiempo y la decadencia, se presenta como un
+                            elemento dramático en un paisaje que parece casi etéreo y efímero.
+
+                            En resumen, la pintura no solo captura un paisaje, sino que invita a reflexionar sobre el
+                            paso del tiempo, la fragilidad humana y la belleza efímera del momento.
+                        </p>
+                        <br>
+                        <button id="close1">Cerrar</button>
+                    </dialog>
+                </div>
+                <script>
+                    window.mostrarModal1.addEventListener("click", () => { window.modal1.showModal() })
+                </script>
+                <script>
+                    window.close1.addEventListener("click", () => { window.modal1.close() })
+                </script>
+
+            </div>
+
+            <div class="row" id="02">
+                <div>
+                    <a href="#2" id="mostrarModal2">
+                        <svg>
+                            <defs>
+                                <img src="./imagenes/lluviaVaporVelocidad.jpg" alt="Lluvia, vapor y velocidad">
+                            </defs>
+                        </svg>
+                        <h3>Lluvia, vapor y velocidad</h3>
+                    </a>
+                    <dialog id="modal2">
+                        <h3>Lluvia, vapor y velocidad</h3>
+                        <p>"Esta pintura captura un momento dramático en el que un tren a vapor de la Great Western
+                            Railway atraviesa un puente sobre el río Támesis, mientras la lluvia y la niebla crean un
+                            ambiente dinámico y tumultuoso. La escena está impregnada de un sentido de movimiento y
+                            energía, con el tren avanzando a gran velocidad en medio de un paisaje que parece disolverse
+                            en la niebla.
+
+                            Turner utiliza su característico manejo de la luz y el color para expresar la modernidad y
+                            el progreso de la Revolución Industrial, mientras que al mismo tiempo transmite la fuerza de
+                            la naturaleza a través de la lluvia y el vapor. La pintura no se enfoca tanto en los
+                            detalles del tren o el paisaje, sino en el efecto visual y emocional del momento, creando
+                            una atmósfera vibrante de velocidad, poder y transformación.
+
+                            El uso de la atmósfera y la luz en la obra, especialmente la forma en que el vapor y la
+                            lluvia se entrelazan, refleja el interés de Turner por capturar la esencia de la modernidad
+                            en un tiempo de grandes cambios. El tren, como símbolo de la industrialización, se presenta
+                            como una fuerza poderosa que avanza a través de la naturaleza, en una especie de encuentro
+                            entre lo humano y lo natural.
+
+                            En resumen, "Lluvia, vapor y velocidad" es una representación del progreso tecnológico y la
+                            transformación de la época, donde la rapidez del tren y la atmósfera cambiantes del paisaje
+                            sugieren la aceleración de la historia y el impacto de la Revolución Industrial.
+
+                        </p>
+                        <br>
+                        <button id="close2">Cerrar</button>
+                    </dialog>
+                </div>
+                <script>
+                    window.mostrarModal2.addEventListener("click", () => { window.modal2.showModal() })
+                </script>
+                <script>
+                    window.close2.addEventListener("click", () => { window.modal2.close() })
+                </script>
+            </div>
+
+            <div class="row" id="03">
+                <div>
+                    <a href="#3" id="mostrarModal3">
+                        <svg>
+                            <defs>
+                                <img src="./imagenes/El Lago de Buttermere.jpg" alt="El Lago de Buttermere">
+                            </defs>
+                        </svg>
+                        <h3>El Lago de Buttermere</h3>
+                    </a>
+                    <dialog id="modal3">
+                        <h3>El Lago de Buttermere</h3>
+                        <p>creada en 1798. La obra muestra un paisaje del lago Buttermere, en el Parque Nacional de Lake
+                            District, en el noroeste de Inglaterra, rodeado de montañas y una tranquila aldea en el
+                            fondo. Turner capturó la serenidad y la belleza del lugar, destacando tanto la majestuosa
+                            naturaleza como las huellas del ser humano en el paisaje.
+
+                            El paisaje se caracteriza por la luz suave y las sombras que forman una atmósfera tranquila.
+                            El lago refleja el cielo y las montañas, mientras que el contraste entre la luz y las
+                            sombras resalta los detalles de la vegetación y las montañas circundantes. A través de su
+                            uso de colores cálidos y fríos, Turner crea una sensación de armonía entre la naturaleza y
+                            la presencia humana.
+
+                            La obra no solo es una representación del paisaje, sino también una exploración de las
+                            emociones y el estado de ánimo que la naturaleza puede evocar. Aunque la pintura se centra
+                            en la belleza serena del lago, hay una ligera sensación de melancolía que resalta la
+                            relación entre lo efímero y lo eterno, un tema recurrente en la obra de Turner.
+
+                            En resumen, "El Lago de Buttermere" es una pintura que refleja el amor de Turner por el
+                            paisaje británico, mostrando la tranquilidad de la naturaleza a través de su hábil uso de la
+                            luz, el color y la atmósfera. La obra transmite una sensación de paz, pero también de
+                            reflexión sobre el paso del tiempo y la interacción entre la naturaleza y el ser humano.
+
+                        </p>
+                        <br>
+                        <button id="close3">Cerrar</button>
+                    </dialog>
+                </div>
+                <script>
+                    window.mostrarModal3.addEventListener("click", () => { window.modal3.showModal() })
+                </script>
+                <script>
+                    window.close3.addEventListener("click", () => { window.modal3.close() })
+                </script>
+            </div>
+
+
+
+        </div>
+
+        <div class="item item4">
+            <footer> Aviso legal Política de privacidad Política de cookies Modelo semántico digital Accesibilidad
+                Contacto SII Copyright © 2024. Galería Luz de Romance. Plaza de los Sitios nº 1. Zaragoza. 50001. Tel
+                +34 976 679 796.
+                Todos los derechos reservados</footer>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

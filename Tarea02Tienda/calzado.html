@@ -1,0 +1,86 @@
+<!DOCTYPE html> <!-- Define el tipo de documento HTML -->
+<html lang="es"> <!-- Define el idioma del documento como español -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la visualización en dispositivos móviles -->
+    <title>Tienda</title> <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <!-- Vincula Bootstrap para estilos -->
+</head>
+
+<header>
+    <a href="index.html"><img src="./Imagenes/terrazo.jpg" width="60px">HOME</a> <!-- Enlace a la página de inicio con una imagen -->
+    <hr> <!-- Línea horizontal -->
+    <h1 style="text-align:center">DeMoDe</h1> <!-- Título principal centrado -->
+    <hr> <!-- Línea horizontal -->
+    
+    <style type="text/css"> /* Estilos CSS para la tabla */
+        .tg {
+            border-collapse: collapse; /* Colapsa los bordes de la tabla */
+            border-spacing: 0; /* Elimina el espaciado entre celdas */
+            margin: auto; /* Centra la tabla */
+            /* background-image: url(/interfaces/Tarea02Tienda/Imagenes/terrazo.jfif); */ /* Comentado: imagen de fondo para la tabla */
+        }
+
+        .tg td {
+            border: 1px solid black; /* Bordes de las celdas */
+            padding: 10px; /* Espacio interno de las celdas */
+        }
+
+        .tg th {
+            border: 1px solid black; /* Bordes de los encabezados */
+        }
+    </style>
+    
+    <table class="tg"> <!-- Tabla de navegación -->
+        <thead>
+            <tr>
+                <td><a href="index.html">INICIO</a></td> <!-- Enlace a la página de inicio -->
+                <td><a href="ropa.html">ROPA</a></td> <!-- Enlace a la página de ropa -->
+                <td><a href="calzado.html">CALZADO</a></td> <!-- Enlace a la página de calzado -->
+                <td><a href="contacto.html">CONTACTO</a></td> <!-- Enlace a la página de contacto -->
+            </tr>
+        </thead>
+    </table>
+    <br>
+
+    <figure>
+        <img src="./Imagenes/terrazo.jpg" alt="Imagen cabeceza" style="width: 100%; height: 100px;"> <!-- Imagen de encabezado -->
+    </figure>
+</header>
+
+<body>
+    <h2 style="text-align:center">CALZADO</h2> <!-- Subtítulo centrado para la sección de calzado -->
+    <br>
+    <div class="row"> <!-- Contenedor de filas para las imágenes -->
+
+        <div class="col-sm-4"> <!-- Columna para la imagen de zapatillas -->
+            <figure>
+                <img src="./Imagenes/zapatilla.jpg" alt="Imagen ZAPATILLAS" style="width: 80%; height: 80%; margin:auto;"> <!-- Imagen de zapatillas -->
+                <figcaption style="text-align:center">ZAPATILLAS</figcaption> <!-- Título de la imagen -->
+            </figure>
+        </div>
+
+        <div class="col-sm-4"> <!-- Columna para la imagen de botas -->
+            <figure>
+                <img src="./Imagenes/botas.jpg" alt="Imagen BOTAS" style="width: 80%; height: 80%; margin:auto;"> <!-- Imagen de botas -->
+                <figcaption style="text-align:center">BOTAS</figcaption> <!-- Título de la imagen -->
+            </figure>
+        </div>
+
+        <div class="col-sm-4"> <!-- Columna para la imagen de sandalias -->
+            <figure>
+                <img src="./Imagenes/sandalias.jpg" alt="Imagen SANDALIAS" style="width: 80%; height: 80%; margin:auto;"> <!-- Imagen de sandalias -->
+                <figcaption style="text-align:center">SANDALIAS</figcaption> <!-- Título de la imagen -->
+            </figure>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <hr> <!-- Línea horizontal -->
+    <p style="text-align:center">Copyright 2024</p> <!-- Texto centrado de copyright -->
+    <hr> <!-- Línea horizontal -->
+</footer>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            border: 1px solid;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 0.5fr 5fr 0.5fr;
+
+            grid-template-areas:
+                "header header header"
+                "content content content"
+                "content2 content2 content2"
+                "footer footer footer ";
+
+            background-image: url("./imagenes/lluviaVaporVelocidad.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300vp;
+            font-style: oblique;
+            /* color: #3e3f17; */
+        }
+
+        .item {
+            border: 1px solid;
+            width: 100vw;
+            height: auto;
+        }
+
+        .item1 {
+            color:  #3e3f17;;
+            grid-area: header;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .homeAutor {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            opacity: 800%;
+            border: 1px solid rgb(34, 68, 49);
+            border-radius: 50px;
+        }
+
+        .item2 {
+            /* 3 columnas */
+            grid-area: content;
+            text-align: center;
+            font-size: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+
+        a:link {
+            color: #3e3f17;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        a:visited {
+            color: #3e3f17;
+            /* Color después de hacer clic (cuando el enlace ha sido visitado) */
+        }
+
+        a:hover {
+            color: #c4c771;
+        }
+
+        .item3 {
+            grid-area: content2;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .tresColum {
+            /* border: 1px solid; */
+            text-align: justify;
+            flex: 1;
+            /* Asegura que cada columna ocupe el mismo espacio */
+            min-width: 0;
+            /* Evita que el contenido se desborde */
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 150px;
+            font-size: 20px;
+        }
+
+        #turner {
+            margin-top: 100px;
+            width: 350px;
+            height: 400px;
+            display: flex;
+            /* margin-left: auto;
+            margin-right: auto; */
+            justify-content: center;
+        }
+
+        .p {
+            display: flex;
+            justify-content: center;
+            font-style: oblique;
+            
+        }
+
+        .item4 {
+            grid-area: footer;
+            text-align: center;
+        }
+
+        .t {
+            font-size: 50px;
+            text-align: justify;
+            padding-left: 100px;
+        }
+
+        .t1 {
+            font-size: 20px;
+            text-align: justify;
+            padding-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item item1">
+            <a href="home.html">
+                <h1>Galería Luz de Romance</h1>
+            </a>
+        </div>
+
+        <div class="item item2">
+            <a href="autor.html">Autor</a>
+            <a href="obras.html">Obras</a>
+            <a href="contacto.html">Exposición</a>
+        </div>
+
+
+        <div class="item item3">
+            <div class="tresColum">
+                <h2>Vida y carrera</h2>
+                <p>
+                <p>El padre de Turner fue fabricante de pelucas y luego barbero, con un negocio en Maiden Lane, Covent
+                    Garden. Su madre, Mary Marshall, sufrió de inestabilidad mental, lo que pudo haber influido en que
+                    Turner fuera enviado a vivir con su tío en Brentford en 1785, donde mostró su interés por la
+                    pintura
+                </p>
+                <p>
+                    Más tarde asistió a la escuela en Margate, y a los 14 años ingresó a la Royal Academy of
+                    Art, siendo aceptado oficialmente a los 15. Su primera acuarela fue exhibida en 1790 y su primer
+                    óleo en 1796. A lo largo de su vida, expuso regularmente en la Academia.
+                </p>
+                <p>
+                    Turner fue un gran pintor, especialmente conocido por su uso de la luz y por su obra en acuarela,
+                    siendo considerado uno de los fundadores de la pintura paisajística inglesa. Su obra más famosa es
+                    El último viaje del «Temerario» (1839). Viajó por Europa, estudiando en el Louvre y pintando en
+                    lugares como Venecia y Roma. En su juventud, trabajó con el pintor Thomas Girtin.
+                    Tras la muerte de su padre en 1829, Turner cayó en depresión.
+                </p>
+                <p>
+                    Falleció el 19 de diciembre de 1851 en Londres, y fue enterrado en la catedral de San Pablo, junto a
+                    sir Joshua Reynolds. Su última exposición fue en 1850.
+
+                </p>
+
+                </p>
+
+            </div>
+
+            <div class="">
+                <img src="./imagenes/Turner.jpg" alt="Autor; Turner" id="turner"> William Turner
+            </div>
+
+            <div class="tresColum">
+                <h2>Estilo</h2>
+                <p>
+                    <p>
+                    El talento de Turner fue reconocido temprano, convirtiéndose en académico a los 23 años, lo que le
+                    permitió innovar sorprendentemente. Sus últimas obras fueron llamadas "rompecabezas fantásticos", y
+                    fue considerado un genio, con el crítico John Ruskin describiéndolo como el artista capaz de captar
+                    el temperamento de la naturaleza.
+                    </p>
+                    <p>
+                    Turner, pintor romántico, reflejó el poder sublime de la naturaleza sobre la humanidad, abordando
+                    fenómenos como incendios, catástrofes y el mar. Su estilo
+                    evolucionó desde el paisajismo tradicional hasta representar la naturaleza en su forma más
+                    destructiva y sublime.
+
+                    </p>
+                    <p>
+                    Utilizó técnicas de acuarela en sus óleos para crear luminosidad y efectos atmosféricos. En sus
+                    últimos años, se centró más en la luz y el color, como se ve en obras como Lluvia, vapor y velocidad
+                    (1844), donde los objetos son apenas reconocibles.
+                    </p>
+
+                    <p>
+                    Junto a John Constable, fue un referente de la pintura inglesa, y su influencia llegó a los
+                    impresionistas y al arte moderno, incluido el arte
+                    abstracto. Se ha sugerido que las inusuales puestas de sol de 1816, causadas por cenizas volcánicas,
+                    pudieron haber inspirado su trabajo.
+                    </p>
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="item item4">
+            <footer> Aviso legal Política de privacidad Política de cookies Modelo semántico digital Accesibilidad
+                Contacto SII Copyright © 2024. Galería Luz de Romance. Plaza de los Sitios nº 1. Zaragoza. 50001. Tel
+                +34 976 679 796.
+                Todos los derechos reservados
+            </footer>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
