@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+    <style>
+        #footer {
+            text-align: center;
+            color: grey;
+        }
+
+        #pasos {
+            color: rgb(29, 26, 70);
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            background-color: rgb(208, 208, 208);
+        }
+
+        #titulo {
+            color: rgb(29, 26, 70);
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border: 5px solid rgb(0, 0, 0);
+            background-color: rgb(208, 208, 208);
+
+        }
+
+        #imagen {
+            align-items: center;
+            background-color: white;
+            border-bottom: 50px;
+        }
+
+        img {
+            align-items: center;
+            background-color: white;
+            margin: auto;
+            border-bottom: 50px;
+            /* añadir tamaño del  la imagen */
+            display: block;
+            height: 250px;
+
+        }
+
+        #footer {
+            text-align: center;
+            color: grey;
+            background-color: rgb(208, 208, 208);
+            
+        }
+
+        #receta {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+
+        span {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(29, 26, 70);
+        }
+
+        .col-sm-4 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(208, 208, 208);
+            height: 800px;
+            color: black;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>RECETAS</h3>
+            <nav class="L">
+                <a href="receta1.html">Berenjenas rellenas</a>
+                <br>
+                <a href="receta2.html">Rebollones al ajillo</a>
+                <br>
+                <a href="receta3.html">Tabulé con atún</a>
+                <br>
+            </nav>
+        </div>
+
+
+        <div class="col-sm-8">
+            <h2 id="titulo">Berenjenas rellenas</h2>
+            <div id="imagen">
+                <img
+                    src="data:image/jpg;base64,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" />
+
+            </div>
+
+            <p id="pasos">Cómo hacer Berenjenas rellenas</p>
+            <p id="receta">Vamos a empezar lavando y cortando las berenjenas por la mitad. Como queremos que se
+                cocinen
+                de manera uniforme, lo que tienes que hacer es seguir el súper truco Gallina Blanca: haz unos
+                cortes a
+                través de
+                la pulpa, sin llegar a la piel, y así te aseguras de que se cocine todo el interior de manera
+                uniforme.
+                Cuando las tengas, las pones en una fuente de horno y las pintas con aceite de oliva virgen
+                extra.
+                Asegúrate de que quedan bien impregnadas. Las dejas unos 20-25 minutos y las retiras.
+                Una vez has sacado las berenjenas del horno, déjalas enfriar un poco para sacarles la pulpa con
+                más
+                facilidad. Ayúdate de una cuchara pequeña y verás qué fácil. Sácala toda y córtala pequeñita,
+                que luego
+                la mezclaremos con la carne picada. Cuando la tengas, la reservas en un platito y después ya
+                volveremos
+                a ella.
+                <br>
+                <br>
+                ¡Ahora ya vamos a encender el fuego! Añade un poco de aceite de oliva virgen y cuando esté
+                caliente,
+                puedes añadir la carne picada. Remuévelo todo bien y en un minutito añades también la pulpa de
+                las
+                berenjenas que tienes reservada. Vuelve a remover para integrarlo todo y ya puedes añadir las 4
+                cucharadas de Sofrito casero. ¡Verás qué color coge todo!
+                <br>
+                <br>
+                Salpimiéntalo al gusto y lo dejas unos 5 minutos al fuego, que se vaya cocinando todo. Seguro
+                que ya
+                hueles a rico. Cuando lo tengas, lo reservas todo en un plato y ya puedes ir a buscar las
+                berenjenas
+                para rellenarlas.
+                <br>
+                <br>
+                Ahora que ya lo tienes todo listo, vamos a rellenar las berenjenas con toda la mezcla. Coge una
+                cuchara
+                y vas rellenando, sin aplastar, que queden bien rellenas y con la mezcla holgada. Perfecto.
+                Cuando las
+                tengas, añade un poco de queso rallado por encima para gratinarlas al horno. ¡Ya verás qué ricas
+                quedan!
+                <br>
+                Déjalas en el horno a una temperatura de 200 ºC hasta que el queso esté fundido y doradito.
+                Calcula unos
+                10 minutos.
+                <br>
+
+                Pasado ese tiempo, ya están listas para servir.
+                <br>
+                <br>
+                <span>¡Qué aprovechen!</span>
+            </p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <p id="footer">
+            Copyright © 2024 De Rechupete · Publicidad y colaboraciones ·
+            Términos de uso <br>
+            Política de privacidad <br>
+            Política de cookies
+
+            Diseñado por PIENSA en PIXELS · Cloud hosting con StackScale
+        </p>
+    </footer>
+
+
+
+</body>
+
+</html>

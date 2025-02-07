@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!--Mi propio CSS después de la llamada a Bootstrap-->
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+
+<header>
+    <a href="index.html"><img src="Multimedia/HomeIcon.jpg" width="40px"></a>
+    <h1>Web sencilla de ejemplo</h1></td>
+    <br>
+    <nav>
+        <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0; margin: auto;}
+            .tg td{border: 1px solid black; padding: 10px;}
+            .tg th{border: 1px solid black;}
+        </style>
+         <table class="tg"><thead>
+            <tr>
+                <td><a href="index.html">Home</a></td>
+                <td><a href="Contact.html">Contact</a></td>
+                <td>Nuestros principios</td>
+                <td>Tienda</td>
+            </tr></thead>
+        </table>
+    </nav>
+    <br>
+</header>
+
+<body>
+    <h1>Home</h1>
+    
+    <!--Usamos div combinado con identificadores de clase Bootstrap para generar un grid-->
+
+    <div class="row">
+        <div class="col-sm-2">
+            <h2>Navigation</h2>
+            <nav class="LatMenu">
+                <ul>
+                    <li><a href="#S1">Section 1</a></li>
+                    <li><a href="#S2">Section 2</a></li>
+                    <li><a href="#S3">Section 3</a></li>
+                </ul>
+            </nav>
+            <section>
+                <h2>FAQ</h2>
+                <details>
+                    <summary>¿Qué estamos haciendo?</summary>
+                    <p>¡Aprender HTML!</p>
+                    <p>¡Aprender HTML!</p>
+                </details>
+                <details>
+                    <summary>¿Por qué?</summary>
+                    <p>Porque estamos cursando DAW2</p>
+                </details>
+            </section>
+        </div>
+        <div class="col-sm-8">
+            <section id="S1" class="SectText">
+                <h2>Section 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ultrices augue. Donec ut erat nisi. Proin malesuada lectus sit amet ipsum iaculis, id dictum est condimentum. Aliquam ligula purus, hendrerit vel porta nec, dapibus et metus. Pellentesque et nisi vel ex malesuada blandit sit amet sit amet ipsum. Vestibulum eleifend, justo quis vehicula tempus, magna enim sollicitudin mi, sed elementum elit urna eleifend purus. Pellentesque laoreet rhoncus fringilla. Proin aliquet porttitor ultrices. Nullam sit amet eros libero. Ut porttitor, odio sed luctus efficitur, felis dui tristique mauris, eget malesuada mi nisl et erat. Praesent placerat vestibulum condimentum.</p>
+
+                <figure>
+                    <img src="Multimedia/img1.jpg" alt="Imagen de un hombre con gafas entre libros">
+                    <figcaption>Imagen de un hombre con gafas entre libros</figcaption>
+                </figure>
+                <br>
+
+                <p>Curabitur elementum scelerisque cursus. Fusce eget viverra sapien, at lobortis enim. Praesent semper arcu quis dui malesuada condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris pharetra auctor dignissim. Aliquam sit amet rhoncus massa. Pellentesque pharetra dolor ac ipsum viverra vehicula. Aliquam laoreet pharetra lacus quis vulputate. Morbi tristique mi tortor, facilisis ultricies neque maximus vitae.</p>
+            </section>
+
+            <section id="S2" class="SectText">
+                <h2 >Section 2</h2>
+                <p>Vestibulum lacinia eleifend vehicula. Nulla id arcu at libero semper aliquam. In ac ultricies arcu. Nam condimentum risus augue, porta vestibulum elit hendrerit eget. Aliquam varius velit dui, nec tincidunt diam laoreet ut. Maecenas facilisis dui venenatis ex lobortis sagittis. Integer dictum libero eu fermentum porta. Fusce dapibus purus in mollis vestibulum. Nullam metus ipsum, finibus a sagittis sit amet, feugiat in risus. Ut ultricies dapibus dolor, et ullamcorper nulla accumsan et. Praesent faucibus quis orci ut aliquet. Pellentesque scelerisque aliquet odio sed volutpat. Donec porttitor tempus dapibus. Integer dignissim, purus non interdum tincidunt, metus arcu ullamcorper odio, in semper enim mauris non dui. Morbi nisi ipsum, efficitur in tempus nec, vulputate quis lectus. Nulla vel cursus magna, ac cursus diam.</p>
+
+                <figure>
+                    <img src="Multimedia/img2.jpg" alt="Imagen de un grupo de gente que genera desconfianza">
+                    <figcaption>Imagen de un grupo de gente que genera desconfianza</figcaption>
+                </figure>
+                <br>
+
+                <p>Cras in posuere nisl. Cras sit amet ligula vulputate, aliquam lacus at, pulvinar tellus. Nulla rutrum, velit at elementum laoreet, nisl tortor mattis est, nec gravida nunc orci a sapien. Sed dolor est, tempus sit amet imperdiet ut, pulvinar in diam. Ut consequat massa vitae dolor sagittis iaculis. Duis justo metus, tincidunt vitae enim in, viverra interdum nulla. In at arcu et metus vulputate bibendum vel pretium eros. Sed elementum nec neque a dapibus. Aenean quis egestas tortor. Curabitur varius erat massa, quis venenatis urna placerat eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </section>
+
+            <section id="S3" class="SectText">
+                <h2>Section 3</h2>
+                <ol class="lista1">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                </ol>
+
+                <p>Nam auctor arcu nec justo congue aliquet. Nulla euismod vitae massa id ullamcorper. Suspendisse bibendum nulla leo, in porta eros sollicitudin eu. Aliquam vel felis leo. In fermentum sapien nec orci dignissim, a dignissim urna accumsan. Nullam nibh nisl, cursus id cursus quis, dignissim id urna. Nullam semper, quam id condimentum pharetra, urna elit imperdiet leo, sed sagittis lacus libero quis lectus. Maecenas facilisis nisi sed nisi tempus pharetra. Maecenas vulputate placerat ornare. Vivamus felis arcu, dapibus quis erat ut, cursus scelerisque augue. Nunc tincidunt feugiat urna, et efficitur lectus porta a. Etiam blandit leo magna, non hendrerit nibh tempor sit amet. In ac fermentum dolor.</p>
+            </section>
+
+        </div>
+    </div>
+
+</body>
+
+
+<footer>
+    <a href="mailto:mtovar@e-itaca.es">Email-me!</a>
+</footer>
+</html>

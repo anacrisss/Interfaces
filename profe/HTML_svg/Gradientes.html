@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Document</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!--Mi propio CSS después de la llamada a Bootstrap-->
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+
+<header>
+    <a href="index.html">
+        <svg>
+            <rect width="100" height=100 fill="grey" x="50" y="50" stroke="grey"></rect>
+
+            <polyline points="51 100 65 120 70 115 75 130 80 125 85 140 90 135 95 150 150 120"
+            stroke="orange" fill="transparent" stroke-width="3"/>
+            <ellipse rx="40" ry="20" cx="100" cy="80"></ellipse>
+        
+            <text x="100" y="86" font-size="15" text-anchor="middle" fill="white">Empresa</text>
+
+            <rect width="130" height=100 fill="white" x="150" y="50" stroke="grey"></rect>
+
+            <text x="160" y="80" font-size="20" text-anchor="left" fill="black">Working</text>
+            <text x="160" y="110" font-size="20" text-anchor="left" fill="black">For People</text>
+            <text x="160" y="140" font-size="20" text-anchor="left" fill="black">(For Money)</text>
+        </svg>
+    </a>
+
+    <h1>Scalable Vector Graphics</h1></td>
+    <br>
+    <nav>
+        <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0; margin: auto;}
+            .tg td{border: 1px solid black; padding: 10px;}
+            .tg th{border: 1px solid black;}
+        </style>
+         <table class="tg"><thead>
+            <tr>
+                <td><a href="index.html">Home</a></td>
+                <td><a href="Gradientes.html">Gradientes</a></td>
+                <td><a href="Patrones.html">Patrones</a></td>
+            </tr></thead>
+        </table>
+    </nav>
+    <br>
+</header>
+
+<body>
+    <section class="Gradientes">
+        <h2>Gradientes</h2>
+        <p>Los gradientes son la combinación de uno o varios colores ordenados de forma lineal en la que se realiza una transición gradual, suave y progresiva. Podemos emplearlos para rellenar el interior de otros elementos definidos en svg.</p>
+
+        <p>Tenemos gradientes básicos de dos tipos:</p>
+
+        <h3>Lineales</h3>
+        <p>Debemos definirlo dentro de un elemento <em>defs</em> mediante la instrucción linearGradient.</p>
+
+        <svg style="display: block; margin: auto;">
+            <defs>
+                <linearGradient id="MyLinGrad">
+                    <stop offset="0%" stop-color="blue"></stop>
+                    <stop offset="40%" stop-color="green"></stop>
+                    <stop offset="100%" stop-color="orange"></stop>
+                </linearGradient>
+            </defs>
+            <rect width="200" height="200" x="0" y="0" stroke="black" fill="url(#MyLinGrad)" />
+        </svg>
+
+        <hr>
+        <p>Debemos tener en cuenta que:</p>
+        <ul>
+            <li>El atributo <code>offset</code> define los pasos del gradiente</li>
+            <li>El atributo <code>stop-color</code> define el color de cada paso</li>
+            <li>Podemos tener dos o más pasos en la definición de los colores de nuestro gradiente</li>
+            <li>Debemos asociar un <code>id</code> al elemento <code>linearGradient</code> que luego referiremos desde el atributo <code>fill</code> del elemento que queramos rellenar con dicho gradiente tal que <code>fill=url(#MyGradId)</code></li>
+        </ul>
+
+        <h3>Radiales</h3>
+        <p>Debemos definirlo dentro de un elemento <em>defs</em> mediante la instrucción radialGradient. 
+        Este elemento admite atributos parecidos a la elipse para definir el comportamiento del gradiente.</p>
+
+        <svg height="150" width="400" style="display: block; margin: auto;">
+            <defs>
+              <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                <stop offset="0%" stop-color="red" />
+                <stop offset="100%" stop-color="darkblue" />
+              </radialGradient>
+            </defs>
+            <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+        </svg>
+
+        <ul>
+            <li>Los atributos <code>cx</code> and <code>cy</code> definen la posición x e y del círculo final del gradiente</li>
+            <li>Los atributos <code>fx</code> and <code>fy</code> definen la posición x e y del  círculo de inicio del gradiente.</li>
+            <li>El atributo <code>r</code> define el radio del círculo final del gradiente</li>
+            <li>Los colores del gradiente se definen mediante dos o más elementos
+            <code>&lt;stop&gt;</code></li>
+            <li>El atributo <code>offset</code> define los pasos del gradiente</li>
+            <li>El atributo <code>stop-color</code> define el color de cada paso</li>
+            <li>Debemos asociar un <code>id</code> al elemento <code>linearGradient</code> que luego referiremos desde el atributo <code>fill</code> del elemento que queramos rellenar con dicho gradiente tal que <code>fill=url(#MyGradId)</code></li>
+        </ul>
+        <hr>
+
+    </section>
+
+
+</body>
+
+<footer>
+    <a href="mailto:mtovar@e-itaca.es">Email-me!</a>
+</footer>
+</html>

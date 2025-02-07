@@ -1,0 +1,55 @@
+
+        #footer {
+            text-align: center;
+            color: grey;
+        }
+
+        #pasos {
+            color: rgb(29, 26, 70);
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            background-color: rgb(208, 208, 208);
+        }
+
+        #titulo {
+            color: rgb(29, 26, 70);
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            border: 5px solid rgb(0, 0, 0);
+            width: auto;
+            height: auto;
+            background-color: rgb(208, 208, 208);
+
+        }
+
+        img {
+            align-items: center;
+            background-color: white;
+            margin: auto;
+            border-bottom: 50px;
+            /* añadir tamaño del  la imagen */
+            display: block;
+            height: 250px;
+
+        }
+
+
+        #footer {
+            text-align: center;
+            color: grey;
+            background-color: rgb(208, 208, 208);
+        }
+
+        #receta {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+
+        span {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(29, 26, 70);
+        }

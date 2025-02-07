@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!--Mi propio CSS después de la llamada a Bootstrap-->
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+
+<header>
+    <a href="index.html">
+        <svg style="display: block; margin: auto;">
+            <rect width="100" height=100 fill="grey" x="50" y="50" stroke="grey"></rect>
+
+            <polyline points="51 100 65 120 70 115 75 130 80 125 85 140 90 135 95 150 150 120"
+            stroke="orange" fill="transparent" stroke-width="3"/>
+            <ellipse rx="40" ry="20" cx="100" cy="80"></ellipse>
+        
+            <text x="100" y="86" font-size="15" text-anchor="middle" fill="white">Empresa</text>
+
+            <rect width="130" height=100 fill="white" x="150" y="50" stroke="grey"></rect>
+
+            <text x="160" y="80" font-size="20" text-anchor="left" fill="black">Working</text>
+            <text x="160" y="110" font-size="20" text-anchor="left" fill="black">For People</text>
+            <text x="160" y="140" font-size="20" text-anchor="left" fill="black">(For Money)</text>
+        </svg>
+    </a>
+
+
+    <h1>Scalable Vector Graphics</h1></td>
+    <br>
+    <nav>
+        <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0; margin: auto;}
+            .tg td{border: 1px solid black; padding: 10px;}
+            .tg th{border: 1px solid black;}
+        </style>
+         <table class="tg"><thead>
+            <tr>
+                <td><a href="index.html">Home</a></td>
+                <td><a href="Gradientes.html">Gradientes</a></td>
+                <td><a href="Patrones.html">Patrones</a></td>
+            </tr></thead>
+        </table>
+    </nav>
+    <br>
+</header>
+
+<body>
+    <section>
+        <h2>Elementos básicos:</h2>
+        <p>El formato de archivo SVG es una herramienta que se utiliza habitualmente para mostrar gráficos, diagramas e ilustraciones bidimensionales en los sitios web. Se trata de un formato de imagen vectorial por lo que se puede ampliar y reducir sin perder resolución.</p>
+        <p>Tiene integración muy sencilla con HTML a través de elementos tipo canvas <code>&lt;svg&gt;</code></p>
+
+        <p>Los elementos más sencillos van a ser:
+            <ul>
+                <li>Rectángulos: <code>&lt;rect&gt;</code></li>
+                <li>Círculos: <code>&lt;circle&gt;</code></li>
+                <li>Elipses: <code>&lt;ellipse&gt;</code></li>
+                <li>Líneas <code>&lt;line&gt;</code></li>
+                <li>Multilíneas: <code>&lt;polyline&gt;</code></li>
+                <li>Paths: <code>&lt;path&gt;</code></li>
+                <li>Polígonos: <code>&lt;polygon&gt;</code></li>
+            </ul>
+        </p>
+
+        <p>Por ejemplo, para definir una línea tenemos el elemento <code>line</code>:</p>
+        <svg width="320" style="display: block; margin: auto;">
+            <line x1="0" y1="0" x2="200" y2="150" style="stroke:royalblue;stroke-width:2" />
+        </svg>
+
+        <p>O para definir una serie de líneas mediante las coordenadas de los puntos extremos de cada segmento empleando el elemento <code>polyline</code>:</p>
+        <svg height="210" width="500" style="display: block; margin: auto;">
+            <polyline points="0,0 50,150 100,75 150,50 200,140 250,140"
+            style="fill:none;stroke:green;stroke-width:3" />
+        </svg>
+
+        <p>Podemos crear un path cerrado mediante <code>path</code></p>
+
+        <svg height="210" width="400" style="display: block; margin: auto;">
+            <path d="M150 5 L75 200 L225 200 Z"
+            style="fill:none;stroke:green;stroke-width:3" />
+        </svg>
+        <p>O dibujar líneas curvas empleando curvas de Bezier y con atributo <code>q</code>.</p>
+
+        <svg height="200" width="300" style="display: block; margin: auto;">
+            <path d="M 50 150 q 75 -200 150 0" stroke="blue" stroke-width="4" fill="none"/>
+        </svg>
+
+        <p>Para más información sobre este elemento podemos consultar la documentación y los ejemplos en <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths" target="_blank">MDN</a></p>
+
+        <h2>Combinaciones de elementos:</h2>
+        <p>Podemos combinar diferentes elementos para lograr composiciones:</p>
+    
+        <svg width="100%" height="200">
+
+            <rect width="100%" height="100%" fill="red" />
+
+            <circle cx="50%" cy="50%" r="80" fill="green" />
+
+            <text x="50%" y="60%" font-size="60" text-anchor="middle" fill="white">SVG</text>
+        </svg>
+
+        <hr>
+
+        <svg width="100%" height="200">
+
+            <rect width="100%" height="100%" fill="blue" />
+
+            <ellipse rx="100" ry="40" cx="50%" cy="50%"></ellipse>
+
+            <a href="Contact.html"><text x="50%" y="60%" font-size="60" text-anchor="middle" fill="white">SVG</text></a>
+        </svg>
+        <hr>
+
+        <p>Podemos diseñar polígonos a partir de la especificación de las coordenadas <code>x</code> e <code>y</code> de sus vértices:</p>
+        <svg height="280" width="360" style="display: block; margin: auto;">
+            <polygon points="150,150 258,77 258,202 150,265 42,202 42,77" style="fill:royalblue; stroke: green;stroke-width: 5px;" />
+        </svg>
+        <p>El origen de coordenadas está en la esquina superior izquierda y la coordenada y cuenta hacia abajo.</p>
+        <hr>
+
+        <p>Podemos combinar elementos de todo tipo dentro de un <code>svg</code> teniendo en cuenta que existe una prioridad en la visualización que tiene que ver con el renderizado y un z-index: En un svg lo que está más abajo se renderiza, en general, después.</p>
+
+        <svg style="display: block; margin: auto;">
+            <rect width="100" height=100 fill="grey" x="50" y="50"></rect>
+
+            <polyline points="51 100 65 120 70 115 75 130 80 125 85 140 90 135 95 150 150 120" stroke="orange" fill="transparent" stroke-width="3"/>
+            <ellipse rx="40" ry="20" cx="100" cy="80"></ellipse>
+                    
+            <text x="100" y="86" font-size="20" text-anchor="middle" fill="white">Logo</text>
+        </svg>
+    </section>
+</body>
+
+<footer>
+    <a href="mailto:mtovar@e-itaca.es">Email-me!</a>
+</footer>
+</html>
